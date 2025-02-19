@@ -5,29 +5,29 @@
 ### Attributes of `fang_et_al_genotypes`
 
 ```
-# I checked how large the file size is in human-readable format.
+# I checked how large the file size is in human-readable format
 du -h fang_et_al_genotypes.txt
 
-# I checked how many lines, words, and number of characters there were in the file.
+# I checked how many lines, words, and number of characters there were in the file
 wc fang_et_al_genotypes.txt
 
-# I inspected the first two lines of the file to see what they looked like.
+# I inspected the first two lines of the file to see what they looked like
 head -n 2 fang_et_al_genotypes.txt
 
-# I checked the last two lines of the file to see if they included any metadata.
+# I checked the last two lines of the file to see if they included any metadata
 tail -n 2 fang_et_al_genotypes.txt
 
-# I checked how many columns there were in the file, assuming it is tab-delimitered.
+# I checked how many columns there were in the file, assuming it is tab-delimitered
 awk -F "\t" '{print NF; exit}' fang_et_al_genotypes.txt
 
 # Since there were so many columns, I only wanted to see what the first 20 columns
-# looked like for the first 20 lines in a human readable format.
+# looked like for the first 20 lines in a human readable format
 cut -f 1-20 fang_et_al_genotypes.txt | column -t | head -n 20
 
-# I checked if there were any lines which didn't have missing data (?/?) using grep.
+# I checked if there were any lines which didn't have missing data (?/?) using grep
 grep "^?/?" fang_et_al_genotypes.txt
 
-# I checked what the encoding of the file type was:
+# I checked what the encoding of the file type was
 file fang_et_al_genotypes.txt
 
 # I checked if there were any duplicate gene types
@@ -49,29 +49,29 @@ By inspecting this file I learned that:
 ### Attributes of `snp_position.txt`
 
 ```
-# I checked how large the file size is in human-readable format.
+# I checked how large the file size is in human-readable format
 du -h snp_position.txt
 
-# I checked how many lines, words, and number of characters there were in the file.
+# I checked how many lines, words, and number of characters there were in the file
 wc snp_position.txt
 
-# I inspected the first two lines of the file to see what they looked like.
+# I inspected the first two lines of the file to see what they looked like
 head -n 2 snp_position.txt
 
-# I checked the last two lines of the file to see if they included any metadata.
+# I checked the last two lines of the file to see if they included any metadata
 tail -n 2 snp_position.txt
 
-# I checked how many columns there were in the file, assuming it is tab-delimitered.
+# I checked how many columns there were in the file, assuming it is tab-delimitered
 awk -F "\t" '{print NF; exit}' snp_position.txt
 
 # Since the column names were so long, I only wanted to see what the first 9 columns
-# looked like for the first 15 lines in a human readable format.
+# looked like for the first 15 lines in a human readable format
 cut -f 1-9 snp_position.txt | column -t | head -n 15
 
 # I also checked the end columns to see anything I missed
 cut -f 9- snp_position.txt | column -t | head -n 15
 
-# I checked what the encoding of the file type was:
+# I checked what the encoding of the file type was
 file snp_position.txt
 
 # I checked what the most common chromosomes were
