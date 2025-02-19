@@ -5,9 +5,6 @@
 ### Attributes of `fang_et_al_genotypes`
 
 ```
-# Changed directory into raw data folder.
-cd ./raw_data
-
 # I checked how large the file size is in human-readable format.
 du -h fang_et_al_genotypes.txt
 
@@ -52,9 +49,6 @@ By inspecting this file I learned that:
 ### Attributes of `snp_position.txt`
 
 ```
-# Changed directory into raw data folder.
-cd ./raw_data
-
 # I checked how large the file size is in human-readable format.
 du -h snp_position.txt
 
