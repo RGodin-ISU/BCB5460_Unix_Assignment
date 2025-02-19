@@ -39,7 +39,7 @@ cut -f 3 fang_et_al_genotypes.txt | sort | uniq -c | sort -nr | head -n 3
 
 By inspecting this file I learned that:
 
-* There are 2,783 lines in the file, 2744038 words, and 11051939 characters, with a file size of 6.3 MB. Thus, there are not many lines, but there appear to be a lot of words and characters relatively speaking. This is due to there being a large number of columns on each line, one for each single nucleotide polymorphisms (SNP) in the sample along with some metadata.
+* There are 2,783 lines in the file, 2744038 words, and 11051939 characters, with a file size of 6.7 MB. Thus, there are not many lines, but there appear to be a lot of words and characters relatively speaking. This is due to there being a large number of columns on each line, one for each single nucleotide polymorphisms (SNP) in the sample along with some metadata.
 * Since only the first line of the file contained metadata with the head camp, and since the tail doesn't show any metadata, it appears there is only metadata for the first row. This implies there are 2,782 samples in the SNP dataset.
 * Inspecting the number of columns, I got 986. Since the first three columns are metadata (sample ID, JG_OTU, and group), this appears to imply each sample has info on 983 SNPs.
 * There is missing data for some of the SNPs with "?/?" appearing. At least, I assume this represents missing data. I couldn't find any sample which did not have "?/?" for at least one SNP using grep. Thus, I assume this is pretty common.
@@ -83,7 +83,7 @@ cut -f 9 snp_position.txt | sort | uniq -c | sort -nr | head -n 3
 
 By inspecting this file I learned that:
 
-* There are 984 lines in the file, 13198 words, and 82763 characters, with a file size of 4.3 KB. Thus, the file is considerably smaller than the fang_et_al_genotypes.txt file as expected.
+* There are 984 lines in the file, 13198 words, and 82763 characters, with a file size of 49 KB. Thus, the file is considerably smaller than the fang_et_al_genotypes.txt file as expected.
 * The file doesn't appear to have any metadata with the only the first line providing the column names, with there appearing to be 15 columns. Thus, there appear to be 983 individual SNPs documented in the file. For each SNP, there appears to be 
 	* From looking at the first 15 lines in the file (only the first 9 columns) it did not appear that there was any missing data. I would search for it, but since it is not obvious how it would be documented, I can't easily grep for it.
 * The file is ASCII text, without very long lines.
