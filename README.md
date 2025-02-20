@@ -120,7 +120,7 @@ awk '$2 ~ /unknown/ || $3 ~ /unknown/  { print $0 >  "maize/final/maize_chromoso
 awk '$2 ~ /multiple/ || $3 ~ /multiple/  { print $0 >  "maize/final/maize_chromosome_multiple.txt"}' maize/interim/joined_maize_snp_data.txt
 ```
 
-- The code creates a folder for the processed maize files including a "final" folder where the final processed data files are stored as well as an "interim" folder where intermediate files that are needed for processing are stored.
+- The code creates a folder for the processed maize files under "maize." This includes a "final" subfolder where the final processed data files are stored as well as an "interim" subfolder where intermediate files that are needed for processing are stored. The chromosome files are stored under the "final" subfolder, separated by increasing and decreasing chromosome position.
 - The code then extracts the data corresponding to maize samples from fang_et_al_genotypes.txt and transposes them with the provided awk script so that they can be joined with the SNP_ID, chromosome, and position columns that are extracted from snp_position.txt.
 	- Note that the joined file is space delimitered, not tab delimitered so some commands are modified accordingly.
 - Once the files are joined into the interim joined_maize_snp_data.txt file, the file is sorted and processed into individual files for each chromosome which are sorted based on increasing or decreasing position. These individual files are then saved in the proper subfolder "increasing_pos_chromosome" or "decreasing_pos_chromosome".
@@ -157,4 +157,4 @@ awk '$2 ~ /unknown/ || $3 ~ /unknown/  { print $0 >  "teosinte/final/teosinte_ch
 awk '$2 ~ /multiple/ || $3 ~ /multiple/  { print $0 >  "teosinte/final/teosinte_chromosome_multiple.txt"}' teosinte/interim/joined_teosinte_snp_data.txt
 ```
 
-- The code functions exactly as the maize processing script, with file names being modified to replace "maize" with "teosinte."
+- The code functions exactly as the maize processing script, with file names being modified to replace "maize" with "teosinte." They are stored under the "teosinte" folder.
